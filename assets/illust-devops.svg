@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 78" fill="none">
+  <path stroke="#2563eb" stroke-opacity=".42" stroke-width="1.55" stroke-linecap="round" d="M14 24c8-8 20-8 28 0"/>
+  <circle cx="28" cy="28" r="3" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <circle cx="14" cy="24" r="3" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <circle cx="42" cy="24" r="3" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <rect x="12" y="44" width="22" height="18" rx="2" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <rect x="40" y="44" width="22" height="18" rx="2" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <rect x="68" y="44" width="22" height="18" rx="2" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <rect x="96" y="44" width="14" height="18" rx="2" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <path stroke="#2563eb" stroke-width="1.55" stroke-linecap="round" d="M34 53h6M62 53h6M90 53h6M108 53"/>
+  <path stroke="#2563eb" stroke-opacity=".42" stroke-width="1.55" stroke-linecap="round" d="M28 38v6M52 38v6M76 38v6M100 38v6"/>
+</svg>
