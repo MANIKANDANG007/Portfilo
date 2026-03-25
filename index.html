@@ -404,6 +404,16 @@ section{padding:120px 6vw 80px}
   display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 14px;
   width:100%;
 }
+.hero-illust-tools--aiml{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  justify-items:center;
+  align-items:center;
+  gap:10px 12px;
+}
+.hero-illust-tools--aiml .hero-tool-ico:nth-child(4){
+  grid-column:1/-1;
+}
 .hero-tool-ico{
   width:36px;height:36px;object-fit:contain;display:block;
   flex-shrink:0;
@@ -916,11 +926,11 @@ footer{
         </div>
         <div class="hero-illust">
           <div class="hero-illust-visual">
-            <div class="hero-illust-tools" aria-hidden="true">
+            <div class="hero-illust-tools hero-illust-tools--aiml" aria-hidden="true">
               <img class="hero-tool-ico" src="https://unpkg.com/simple-icons@11.14.0/icons/python.svg" alt="" width="36" height="36" loading="lazy" decoding="async" referrerpolicy="no-referrer"/>
               <img class="hero-tool-ico" src="https://unpkg.com/simple-icons@11.14.0/icons/tensorflow.svg" alt="" width="36" height="36" loading="lazy" decoding="async" referrerpolicy="no-referrer"/>
               <img class="hero-tool-ico" src="https://unpkg.com/simple-icons@11.14.0/icons/pytorch.svg" alt="" width="36" height="36" loading="lazy" decoding="async" referrerpolicy="no-referrer"/>
-              <img class="hero-tool-ico" src="https://unpkg.com/simple-icons@11.14.0/icons/jupyter.svg" alt="" width="36" height="36" loading="lazy" decoding="async" referrerpolicy="no-referrer"/>
+              <img class="hero-tool-ico" src="https://unpkg.com/simple-icons@11.14.0/icons/scikitlearn.svg" alt="" width="36" height="36" loading="lazy" decoding="async" referrerpolicy="no-referrer"/>
             </div>
           </div>
           <span class="hero-illust-cap">AI / ML</span><span class="hero-illust-sub">Training · inference · SageMaker</span>
