@@ -398,8 +398,49 @@ section{padding:120px 6vw 80px}
   padding:6px;
   box-sizing:border-box;
 }
-.hero-illust-img{
-  display:block;width:100%;height:100%;object-fit:contain;object-position:center;
+.hero-illust-art{
+  width:100%;height:100%;display:block;color:inherit;overflow:visible;
+}
+.hero-illust-art *{vector-effect:non-scaling-stroke}
+.hero-illust-art :is(path,circle,rect,line,ellipse,polyline){
+  fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;
+}
+@keyframes illPulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.38;transform:scale(1.14)}
+}
+@keyframes illRingFade{
+  0%,100%{opacity:.18}
+  50%{opacity:.4}
+}
+@keyframes illFlow{
+  to{stroke-dashoffset:-22}
+}
+@keyframes illBob{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-2.5px)}
+}
+.hero-illust-visual .ill-bob{
+  animation:illBob 3.4s ease-in-out infinite;
+  transform-origin:center;
+  transform-box:fill-box;
+}
+.hero-illust-visual .ill-pulse{
+  animation:illPulse 2.6s ease-in-out infinite;
+  transform-origin:center;
+  transform-box:fill-box;
+}
+.hero-illust-visual .ill-pulse--d1{animation-delay:0s}
+.hero-illust-visual .ill-pulse--d2{animation-delay:.32s}
+.hero-illust-visual .ill-pulse--d3{animation-delay:.64s}
+.hero-illust-visual .ill-line-flow{
+  stroke-dasharray:5 7;
+  animation:illFlow 1.35s linear infinite;
+}
+.hero-illust-visual .ill-ring{
+  stroke-width:1.35;opacity:.28;
+  animation:illRingFade 2.8s ease-in-out infinite;
+  transform:none!important;
 }
 .hero-illust-cap{
   display:block;margin-top:8px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text);
@@ -772,6 +813,7 @@ footer{
   .hero-visual.reveal.visible .hero-photo-frame,.hero-visual.reveal.visible .hero-bento{animation:none!important}
   .hero-visual.reveal.visible .hero-illust-grid{animation:none!important}
   .hero-illust:hover{transform:none!important}
+  .hero-illust-visual .ill-bob,.hero-illust-visual .ill-pulse,.hero-illust-visual .ill-line-flow,.hero-illust-visual .ill-ring{animation:none!important;opacity:1;transform:none}
 }
 </style>
 </head>
@@ -884,19 +926,72 @@ footer{
       </div>
       <div class="hero-illust-grid" role="group" aria-label="Domain illustrations for cloud, AI and ML, DevOps, and MLOps">
         <div class="hero-illust">
-          <div class="hero-illust-visual"><img src="assets/illust-cloud.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
+          <div class="hero-illust-visual">
+            <svg class="hero-illust-art" viewBox="0 0 120 80" aria-hidden="true">
+              <g class="ill-bob">
+                <path stroke-width="1.75" opacity=".35" d="M16 54c5-13 20-22 36-20s28 10 32 20"/>
+                <path stroke-width="2.1" d="M22 52c0-10 9-18 20-17 4-9 18-16 30-14 8 1 14 7 15 15 9 0 16 7 16 16"/>
+                <rect x="38" y="44" width="44" height="20" rx="5" stroke-width="2"/>
+                <path stroke-width="1.65" d="M47 53h26M47 57h15"/>
+                <line x1="60" y1="44" x2="60" y2="31" stroke-width="1.65"/>
+                <circle class="ill-ring" cx="60" cy="28" r="8.5"/>
+                <circle class="ill-pulse ill-pulse--d2" cx="60" cy="28" r="4" stroke-width="1.9"/>
+              </g>
+            </svg>
+          </div>
           <span class="hero-illust-cap">Cloud</span><span class="hero-illust-sub">VPC · IaC · scale-out</span>
         </div>
         <div class="hero-illust">
-          <div class="hero-illust-visual"><img src="assets/illust-ai-ml.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
+          <div class="hero-illust-visual">
+            <svg class="hero-illust-art" viewBox="0 0 120 80" aria-hidden="true">
+              <g class="ill-bob">
+                <rect x="36" y="9" width="48" height="15" rx="4" stroke-width="1.65" opacity=".42"/>
+                <circle class="ill-pulse ill-pulse--d1" cx="30" cy="58" r="5" stroke-width="2"/>
+                <circle class="ill-pulse ill-pulse--d2" cx="54" cy="38" r="5" stroke-width="2"/>
+                <circle class="ill-pulse ill-pulse--d3" cx="74" cy="54" r="5" stroke-width="2"/>
+                <circle class="ill-pulse ill-pulse--d1" cx="92" cy="36" r="5" stroke-width="2"/>
+                <path class="ill-line-flow" stroke-width="2" d="M30 58 L54 38 L74 54 L92 36"/>
+                <path stroke-width="1.55" opacity=".38" stroke-dasharray="3 4" d="M38 70h46"/>
+              </g>
+            </svg>
+          </div>
           <span class="hero-illust-cap">AI / ML</span><span class="hero-illust-sub">Training · inference · SageMaker</span>
         </div>
         <div class="hero-illust">
-          <div class="hero-illust-visual"><img src="assets/illust-devops.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
+          <div class="hero-illust-visual">
+            <svg class="hero-illust-art" viewBox="0 0 120 80" aria-hidden="true">
+              <g class="ill-bob">
+                <path stroke-width="1.7" opacity=".4" d="M24 30c6-9 20-10 28-2"/>
+                <path stroke-width="2" d="M20 32 L36 20"/>
+                <path stroke-width="2" d="M52 32 L36 20"/>
+                <circle class="ill-pulse ill-pulse--d1" cx="20" cy="32" r="4" stroke-width="2"/>
+                <circle class="ill-pulse ill-pulse--d2" cx="36" cy="20" r="4" stroke-width="2"/>
+                <circle class="ill-pulse ill-pulse--d3" cx="52" cy="32" r="4" stroke-width="2"/>
+                <rect x="14" y="48" width="20" height="15" rx="4" stroke-width="2"/>
+                <rect x="38" y="48" width="20" height="15" rx="4" stroke-width="2"/>
+                <rect x="62" y="48" width="20" height="15" rx="4" stroke-width="2"/>
+                <rect x="86" y="48" width="20" height="15" rx="4" stroke-width="2"/>
+                <path class="ill-line-flow" stroke-width="1.85" d="M34 56h8M58 56h8M82 56h8"/>
+              </g>
+            </svg>
+          </div>
           <span class="hero-illust-cap">DevOps</span><span class="hero-illust-sub">CI/CD · GitOps · automation</span>
         </div>
         <div class="hero-illust">
-          <div class="hero-illust-visual"><img src="assets/illust-mlops.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
+          <div class="hero-illust-visual">
+            <svg class="hero-illust-art" viewBox="0 0 120 80" aria-hidden="true">
+              <g class="ill-bob">
+                <ellipse cx="34" cy="49" rx="11" ry="4.5" stroke-width="2"/>
+                <line x1="23" y1="49" x2="23" y2="57" stroke-width="2"/>
+                <line x1="45" y1="49" x2="45" y2="57" stroke-width="2"/>
+                <ellipse cx="34" cy="57" rx="11" ry="4.5" stroke-width="2"/>
+                <path class="ill-line-flow" stroke-width="2" d="M45 53 L70 41"/>
+                <rect x="72" y="17" width="32" height="24" rx="5" stroke-width="2"/>
+                <path stroke-width="1.6" d="M78 27h20M78 32h14"/>
+                <circle class="ill-pulse ill-pulse--d3" cx="108" cy="47" r="6" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
           <span class="hero-illust-cap">MLOps</span><span class="hero-illust-sub">Pipelines · monitoring · drift</span>
         </div>
       </div>
