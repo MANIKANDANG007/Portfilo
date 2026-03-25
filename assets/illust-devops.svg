@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 78" fill="none" shape-rendering="geometricPrecision">
   <g stroke="#2563eb" stroke-linecap="round" stroke-linejoin="round">
-    <path stroke-width="1.75" stroke-opacity=".4" d="M14 24c8-8 20-8 28 0"/>
-    <circle cx="28" cy="28" r="3.5" stroke-width="2"/>
-    <circle cx="14" cy="24" r="3.5" stroke-width="2"/>
-    <circle cx="42" cy="24" r="3.5" stroke-width="2"/>
-    <rect x="12" y="44" width="22" height="18" rx="2" stroke-width="2"/>
-    <rect x="40" y="44" width="22" height="18" rx="2" stroke-width="2"/>
-    <rect x="68" y="44" width="22" height="18" rx="2" stroke-width="2"/>
-    <rect x="96" y="44" width="14" height="18" rx="2" stroke-width="2"/>
-    <path stroke-width="1.65" stroke-opacity=".4" d="M28 38v6M52 38v6M76 38v6M100 38v6"/>
-    <path stroke-width="1.65" d="M34 53h6M62 53h6M90 53h6M108 53"/>
+    <path stroke-width="1.7" stroke-opacity=".45" d="M18 26 Q28 18 38 26"/>
+    <circle cx="18" cy="26" r="3.5" stroke-width="2"/>
+    <circle cx="28" cy="30" r="3.5" stroke-width="2"/>
+    <circle cx="38" cy="26" r="3.5" stroke-width="2"/>
+    <rect x="12" y="46" width="22" height="16" rx="2" stroke-width="2"/>
+    <rect x="40" y="46" width="22" height="16" rx="2" stroke-width="2"/>
+    <rect x="68" y="46" width="22" height="16" rx="2" stroke-width="2"/>
+    <rect x="96" y="46" width="14" height="16" rx="2" stroke-width="2"/>
+    <path stroke-width="1.6" d="M34 54h6M62 54h6M90 54h6"/>
   </g>
 </svg>
