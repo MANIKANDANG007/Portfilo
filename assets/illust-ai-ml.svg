@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 78" fill="none">
-  <path stroke="#fff" stroke-opacity=".42" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" d="M28 52L52 28l20 14 20-22"/>
-  <circle cx="28" cy="52" r="4" fill="rgba(255,255,255,0.14)" stroke="#fff" stroke-width="1.2"/>
-  <circle cx="52" cy="28" r="4" fill="rgba(255,255,255,0.14)" stroke="#fff" stroke-width="1.2"/>
-  <circle cx="72" cy="42" r="4" fill="rgba(255,255,255,0.14)" stroke="#fff" stroke-width="1.2"/>
-  <circle cx="92" cy="26" r="4" fill="rgba(255,255,255,0.14)" stroke="#fff" stroke-width="1.2"/>
-  <circle cx="88" cy="56" r="5" fill="rgba(255,255,255,0.14)" stroke="#fff" stroke-width="1.2"/>
-  <path stroke="#fff" stroke-width="1.55" stroke-linecap="round" d="M32 48l16-18M56 30l12 10M76 38l12-9M72 46l12 8"/>
-  <path stroke="#fff" stroke-opacity=".42" stroke-width="1.55" stroke-linecap="round" stroke-dasharray="3 3" d="M46 58h32"/>
-  <rect x="40" y="12" width="40" height="12" rx="2" stroke="#fff" stroke-opacity=".42" stroke-width="1.55"/>
+  <path stroke="#2563eb" stroke-opacity=".42" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" d="M28 52L52 28l20 14 20-22"/>
+  <circle cx="28" cy="52" r="4" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <circle cx="52" cy="28" r="4" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <circle cx="72" cy="42" r="4" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <circle cx="92" cy="26" r="4" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <circle cx="88" cy="56" r="5" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
+  <path stroke="#2563eb" stroke-width="1.55" stroke-linecap="round" d="M32 48l16-18M56 30l12 10M76 38l12-9M72 46l12 8"/>
+  <path stroke="#2563eb" stroke-opacity=".42" stroke-width="1.55" stroke-linecap="round" stroke-dasharray="3 3" d="M46 58h32"/>
+  <rect x="40" y="12" width="40" height="12" rx="2" stroke="#2563eb" stroke-opacity=".42" stroke-width="1.55"/>
 </svg>

@@ -396,29 +396,8 @@ section{padding:120px 6vw 80px}
   background:color-mix(in srgb,var(--accent) 7%,var(--card));
   min-height:4.5rem;
 }
-.hero-illust-mask{
-  position:absolute;inset:0;
-  min-height:48px;
-  background:var(--accent);
-  -webkit-mask-size:contain;mask-size:contain;
-  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
-  -webkit-mask-position:center;mask-position:center;
-}
-.hero-illust-mask--cloud{
-  -webkit-mask-image:url('assets/illust-cloud.svg');
-  mask-image:url('assets/illust-cloud.svg');
-}
-.hero-illust-mask--ai{
-  -webkit-mask-image:url('assets/illust-ai-ml.svg');
-  mask-image:url('assets/illust-ai-ml.svg');
-}
-.hero-illust-mask--devops{
-  -webkit-mask-image:url('assets/illust-devops.svg');
-  mask-image:url('assets/illust-devops.svg');
-}
-.hero-illust-mask--mlops{
-  -webkit-mask-image:url('assets/illust-mlops.svg');
-  mask-image:url('assets/illust-mlops.svg');
+.hero-illust-img{
+  display:block;width:100%;height:100%;object-fit:contain;object-position:center;
 }
 .hero-illust-cap{
   display:block;margin-top:8px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text);
@@ -907,15 +886,15 @@ footer{
           <span class="hero-illust-cap">Cloud</span><span class="hero-illust-sub">VPC · IaC · scale-out</span>
         </div>
         <div class="hero-illust">
-          <div class="hero-illust-visual"><div class="hero-illust-mask hero-illust-mask--ai" aria-hidden="true"></div></div>
+          <div class="hero-illust-visual"><img src="assets/illust-ai-ml.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
           <span class="hero-illust-cap">AI / ML</span><span class="hero-illust-sub">Training · inference · SageMaker</span>
         </div>
         <div class="hero-illust">
-          <div class="hero-illust-visual"><div class="hero-illust-mask hero-illust-mask--devops" aria-hidden="true"></div></div>
+          <div class="hero-illust-visual"><img src="assets/illust-devops.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
           <span class="hero-illust-cap">DevOps</span><span class="hero-illust-sub">CI/CD · GitOps · automation</span>
         </div>
         <div class="hero-illust">
-          <div class="hero-illust-visual"><div class="hero-illust-mask hero-illust-mask--mlops" aria-hidden="true"></div></div>
+          <div class="hero-illust-visual"><img src="assets/illust-mlops.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
           <span class="hero-illust-cap">MLOps</span><span class="hero-illust-sub">Pipelines · monitoring · drift</span>
         </div>
       </div>
