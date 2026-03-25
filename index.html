@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bg-mood="hero">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -17,8 +17,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
+@property --ambient-a{syntax:'<color>';inherits:true;initial-value:rgba(0,0,0,0)}
+@property --ambient-b{syntax:'<color>';inherits:true;initial-value:rgba(0,0,0,0)}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+  --ambient-a:color-mix(in srgb,var(--accent) 15%,transparent);
+  --ambient-b:color-mix(in srgb,#8b5cf6 10%,transparent);
+  transition:--ambient-a 1.1s cubic-bezier(.22,.61,.36,1),--ambient-b 1.1s cubic-bezier(.22,.61,.36,1);
+}
 :root{
   --accent:#2563eb;--accent-light:#eff6ff;
   --bg:#fff;--bg2:#f9f9f9;--text:#1a1a1a;--muted:#888;--border:#e8e8e8;--tag:#f4f4f4;--card:#fff;
@@ -28,6 +35,89 @@ html{scroll-behavior:smooth}
   --accent-light:#1e3a5f;
   --bg:#111;--bg2:#181818;--text:#f0f0f0;--muted:#666;--border:#2a2a2a;--tag:#222;--card:#1a1a1a;
   --btn-bg:#f0f0f0;--btn-text:#111;
+}
+html[data-bg-mood="about"]{
+  --ambient-a:color-mix(in srgb,#0d9488 13%,transparent);
+  --ambient-b:color-mix(in srgb,#0284c7 14%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="about"]{
+  --ambient-a:color-mix(in srgb,#2dd4bf 18%,transparent);
+  --ambient-b:color-mix(in srgb,#38bdf8 16%,transparent);
+}
+html[data-bg-mood="timeline"]{
+  --ambient-a:color-mix(in srgb,var(--accent) 18%,transparent);
+  --ambient-b:color-mix(in srgb,#6366f1 12%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="timeline"]{
+  --ambient-a:color-mix(in srgb,var(--accent) 24%,transparent);
+  --ambient-b:color-mix(in srgb,#818cf8 14%,transparent);
+}
+html[data-bg-mood="skills"]{
+  --ambient-a:color-mix(in srgb,var(--accent) 16%,transparent);
+  --ambient-b:color-mix(in srgb,#06b6d4 11%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="skills"]{
+  --ambient-a:color-mix(in srgb,var(--accent) 22%,transparent);
+  --ambient-b:color-mix(in srgb,#22d3ee 14%,transparent);
+}
+html[data-bg-mood="skills-cloud"]{
+  --ambient-a:color-mix(in srgb,#f59e0b 14%,transparent);
+  --ambient-b:color-mix(in srgb,#38bdf8 13%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="skills-cloud"]{
+  --ambient-a:color-mix(in srgb,#fbbf24 16%,transparent);
+  --ambient-b:color-mix(in srgb,#0ea5e9 15%,transparent);
+}
+html[data-bg-mood="skills-containers"]{
+  --ambient-a:color-mix(in srgb,#326ce5 15%,transparent);
+  --ambient-b:color-mix(in srgb,#2496ed 12%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="skills-containers"]{
+  --ambient-a:color-mix(in srgb,#4d7de0 18%,transparent);
+  --ambient-b:color-mix(in srgb,#2d9cdb 16%,transparent);
+}
+html[data-bg-mood="skills-iac"]{
+  --ambient-a:color-mix(in srgb,#7b42bc 16%,transparent);
+  --ambient-b:color-mix(in srgb,var(--accent) 12%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="skills-iac"]{
+  --ambient-a:color-mix(in srgb,#a78bfa 18%,transparent);
+  --ambient-b:color-mix(in srgb,var(--accent) 15%,transparent);
+}
+html[data-bg-mood="skills-cicd"]{
+  --ambient-a:color-mix(in srgb,#0891b2 14%,transparent);
+  --ambient-b:color-mix(in srgb,#059669 12%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="skills-cicd"]{
+  --ambient-a:color-mix(in srgb,#22d3ee 17%,transparent);
+  --ambient-b:color-mix(in srgb,#34d399 14%,transparent);
+}
+html[data-bg-mood="skills-observe"]{
+  --ambient-a:color-mix(in srgb,#e11d48 12%,transparent);
+  --ambient-b:color-mix(in srgb,#ea580c 11%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="skills-observe"]{
+  --ambient-a:color-mix(in srgb,#fb7185 16%,transparent);
+  --ambient-b:color-mix(in srgb,#fb923c 14%,transparent);
+}
+html[data-bg-mood="skills-lang"]{
+  --ambient-a:color-mix(in srgb,#3b82f6 13%,transparent);
+  --ambient-b:color-mix(in srgb,#64748b 12%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="skills-lang"]{
+  --ambient-a:color-mix(in srgb,#60a5fa 16%,transparent);
+  --ambient-b:color-mix(in srgb,#94a3b8 14%,transparent);
+}
+html[data-bg-mood="contact"]{
+  --ambient-a:color-mix(in srgb,var(--accent) 14%,transparent);
+  --ambient-b:color-mix(in srgb,#a855f7 9%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="contact"]{
+  --ambient-a:color-mix(in srgb,var(--accent) 20%,transparent);
+  --ambient-b:color-mix(in srgb,#c084fc 12%,transparent);
+}
+@media (prefers-reduced-motion:reduce){
+  html{transition:none}
 }
 body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;transition:background .3s,color .3s}
 body.nav-open{overflow:hidden}
@@ -184,7 +274,8 @@ section{padding:120px 6vw 80px}
 #hero{min-height:100vh;display:flex;align-items:center;padding-top:60px;position:relative;overflow:hidden}
 #hero::before{
   content:'';position:absolute;inset:-20% 50% 40% -30%;pointer-events:none;
-  background:radial-gradient(ellipse 80% 60% at 70% 20%,color-mix(in srgb,var(--accent) 14%,transparent),transparent 70%);
+  background:radial-gradient(ellipse 80% 60% at 70% 20%,var(--ambient-a),transparent 68%),
+    radial-gradient(ellipse 55% 50% at 20% 60%,var(--ambient-b),transparent 62%);
   opacity:.9;animation:heroGlow 12s ease-in-out infinite alternate;
 }
 @keyframes heroGlow{
@@ -352,10 +443,14 @@ h1 em{font-style:normal;color:var(--accent)}
 
 /* About */
 #about{
-  background:var(--bg2);
+  background:linear-gradient(168deg,
+    color-mix(in srgb,var(--bg2) 86%,var(--ambient-a) 14%),
+    color-mix(in srgb,var(--bg2) 88%,var(--ambient-b) 12%)
+  );
   position:relative;
   isolation:isolate;
   overflow:hidden;
+  transition:background .9s cubic-bezier(.22,.61,.36,1);
 }
 #about::before{
   content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
@@ -368,7 +463,7 @@ h1 em{font-style:normal;color:var(--accent)}
 #about::after{
   content:'';position:absolute;width:min(480px,90vw);height:min(480px,90vw);right:-18%;top:20%;pointer-events:none;z-index:0;
   border-radius:50%;
-  background:radial-gradient(circle,color-mix(in srgb,var(--accent) 9%,transparent) 0%,transparent 68%);
+  background:radial-gradient(circle,color-mix(in srgb,var(--ambient-a) 55%,var(--accent) 35%),transparent 68%);
   animation:aboutOrb 16s ease-in-out infinite alternate;
 }
 #about>.max{position:relative;z-index:1}
@@ -379,10 +474,14 @@ h1 em{font-style:normal;color:var(--accent)}
 
 /* Skills section pattern */
 #skills{
-  background:var(--bg2);
+  background:linear-gradient(198deg,
+    color-mix(in srgb,var(--bg2) 86%,var(--ambient-a) 14%),
+    color-mix(in srgb,var(--bg2) 88%,var(--ambient-b) 12%)
+  );
   position:relative;
   isolation:isolate;
   overflow:hidden;
+  transition:background .9s cubic-bezier(.22,.61,.36,1);
 }
 #skills::before{
   content:'';position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.5;
@@ -460,7 +559,13 @@ h2{font-size:clamp(22px,3vw,34px);font-weight:600;letter-spacing:-.7px;line-heig
 .cert-sub{font-size:12px;color:var(--muted);margin-top:2px}
 
 /* Timeline */
-#timeline{background:var(--bg)}
+#timeline{
+  background:linear-gradient(178deg,
+    color-mix(in srgb,var(--bg) 91%,var(--ambient-a) 9%),
+    color-mix(in srgb,var(--bg) 93%,var(--ambient-b) 7%)
+  );
+  transition:background .9s cubic-bezier(.22,.61,.36,1);
+}
 .tl{position:relative;padding-left:28px;margin-top:12px}
 .tl::before{
   content:'';position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--border);
@@ -531,7 +636,13 @@ h2{font-size:clamp(22px,3vw,34px);font-weight:600;letter-spacing:-.7px;line-heig
 .pill:hover{transform:scale(1.06);background:color-mix(in srgb,var(--accent-light) 75%,var(--tag));color:var(--accent)}
 
 /* Contact */
-#contact{background:var(--bg)}
+#contact{
+  background:linear-gradient(186deg,
+    color-mix(in srgb,var(--bg) 92%,var(--ambient-a) 8%),
+    color-mix(in srgb,var(--bg) 94%,var(--ambient-b) 6%)
+  );
+  transition:background .9s cubic-bezier(.22,.61,.36,1);
+}
 .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
 .contact-links{display:flex;flex-direction:column;gap:14px;margin-top:8px}
 .contact-link{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted);transition:color .25s,transform .25s ease}
@@ -567,7 +678,14 @@ h2{font-size:clamp(22px,3vw,34px);font-weight:600;letter-spacing:-.7px;line-heig
 .form-hint{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
 .form-msg{margin-top:12px;font-size:13px;text-align:center;color:var(--muted);min-height:18px}
 
-footer{padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;background:var(--bg)}
+footer{
+  padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  background:linear-gradient(180deg,
+    color-mix(in srgb,var(--bg) 94%,var(--ambient-b) 6%),
+    var(--bg)
+  );
+  transition:background .9s cubic-bezier(.22,.61,.36,1);
+}
 .footer-left{font-size:14px;font-weight:600}
 .footer-right{display:flex;gap:24px}
 .footer-right a{font-size:13px;color:var(--muted);transition:color .2s}
@@ -641,6 +759,7 @@ footer{padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-
   #btt{transition:opacity .15s}
   #btt:hover{transform:none!important}
   body{transition:none}
+  #about,#skills,#timeline,#contact,footer{transition:none!important}
   .nav-menu{transition:max-height .01s,opacity .01s,padding .01s,visibility .01s}
   .hero-grid{animation:none!important;opacity:.35}
   .hero-blobs .blob{animation:none!important}
@@ -866,12 +985,12 @@ footer{padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-
       <h2>Tools & technologies</h2>
     </div>
     <div class="skills-grid">
-      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 1 0 0-10z"/></svg></span><p class="skill-card-title">Cloud Platforms</p></div><div class="skill-pills"><span class="pill">AWS</span><span class="pill">Azure</span><span class="pill">GCP</span></div></div>
-      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg></span><p class="skill-card-title">Containers &amp; Orchestration</p></div><div class="skill-pills"><span class="pill">Kubernetes</span><span class="pill">Docker</span><span class="pill">Helm</span><span class="pill">Nomad</span></div></div>
-      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><p class="skill-card-title">Infrastructure as Code</p></div><div class="skill-pills"><span class="pill">Terraform</span><span class="pill">Ansible</span><span class="pill">CloudFormation</span></div></div>
-      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4"/></svg></span><p class="skill-card-title">CI/CD &amp; DevOps</p></div><div class="skill-pills"><span class="pill">CircleCI</span><span class="pill">Jenkins</span><span class="pill">GitHub Actions</span><span class="pill">Azure DevOps</span></div></div>
-      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><p class="skill-card-title">Observability</p></div><div class="skill-pills"><span class="pill">Prometheus</span><span class="pill">Grafana</span><span class="pill">Loki</span><span class="pill">CloudWatch</span></div></div>
-      <div class="skill-card reveal"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg></span><p class="skill-card-title">Languages &amp; Tools</p></div><div class="skill-pills"><span class="pill">Bash</span><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Git</span><span class="pill">Linux</span></div></div>
+      <div class="skill-card reveal" data-skill-mood="cloud"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 1 0 0-10z"/></svg></span><p class="skill-card-title">Cloud Platforms</p></div><div class="skill-pills"><span class="pill">AWS</span><span class="pill">Azure</span><span class="pill">GCP</span></div></div>
+      <div class="skill-card reveal" data-skill-mood="containers"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg></span><p class="skill-card-title">Containers &amp; Orchestration</p></div><div class="skill-pills"><span class="pill">Kubernetes</span><span class="pill">Docker</span><span class="pill">Helm</span><span class="pill">Nomad</span></div></div>
+      <div class="skill-card reveal" data-skill-mood="iac"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span><p class="skill-card-title">Infrastructure as Code</p></div><div class="skill-pills"><span class="pill">Terraform</span><span class="pill">Ansible</span><span class="pill">CloudFormation</span></div></div>
+      <div class="skill-card reveal" data-skill-mood="cicd"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4"/></svg></span><p class="skill-card-title">CI/CD &amp; DevOps</p></div><div class="skill-pills"><span class="pill">CircleCI</span><span class="pill">Jenkins</span><span class="pill">GitHub Actions</span><span class="pill">Azure DevOps</span></div></div>
+      <div class="skill-card reveal" data-skill-mood="observe"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><p class="skill-card-title">Observability</p></div><div class="skill-pills"><span class="pill">Prometheus</span><span class="pill">Grafana</span><span class="pill">Loki</span><span class="pill">CloudWatch</span></div></div>
+      <div class="skill-card reveal" data-skill-mood="lang"><div class="skill-card-head"><span class="skill-card-ico scroll-ico-target"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg></span><p class="skill-card-title">Languages &amp; Tools</p></div><div class="skill-pills"><span class="pill">Bash</span><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">Git</span><span class="pill">Linux</span></div></div>
     </div>
   </div>
 </section>
@@ -1056,6 +1175,48 @@ if(!reduceMotion){
   },{threshold:0.16,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.scroll-ico-target').forEach(el=>icoObs.observe(el));
 }
+
+(function initScrollBgMood(){
+  const root=document.documentElement;
+  const mainSecs=[
+    {id:'hero',mood:'hero'},
+    {id:'about',mood:'about'},
+    {id:'timeline',mood:'timeline'},
+    {id:'skills',mood:'skills'},
+    {id:'contact',mood:'contact'},
+  ].map(s=>({...s,el:document.getElementById(s.id)})).filter(s=>s.el);
+  const skillCards=[...document.querySelectorAll('#skills .skill-card[data-skill-mood]')];
+  function setMood(m){if(root.dataset.bgMood!==m)root.dataset.bgMood=m;}
+  function pick(){
+    const vh=window.innerHeight;
+    const doc=document.documentElement;
+    if(window.scrollY+vh>=doc.scrollHeight-40){setMood('contact');return;}
+    const focusY=vh*0.38;
+    let best=null,bestD=1e9;
+    for(const {el,mood} of mainSecs){
+      const r=el.getBoundingClientRect();
+      if(r.bottom<72||r.top>vh-48)continue;
+      const d=Math.abs((r.top+r.bottom)/2-focusY);
+      if(d<bestD){bestD=d;best={el,mood};}
+    }
+    if(!best)return;
+    if(best.mood==='skills'&&skillCards.length){
+      let sub='skills',subD=1e9;
+      for(const card of skillCards){
+        const r=card.getBoundingClientRect();
+        if(r.bottom<96||r.top>vh-64)continue;
+        const d=Math.abs((r.top+r.bottom)/2-focusY);
+        if(d<subD){subD=d;sub='skills-'+card.dataset.skillMood;}
+      }
+      setMood(sub);
+    }else setMood(best.mood);
+  }
+  let raf=0;
+  function onScroll(){if(raf)return;raf=requestAnimationFrame(()=>{raf=0;pick();});}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll,{passive:true});
+  pick();
+})();
 
 const btt=document.getElementById('btt');
 const siteNav=document.querySelector('.site-nav');
