@@ -301,13 +301,18 @@ section{padding:120px 6vw 80px}
   box-shadow:0 14px 36px color-mix(in srgb,var(--accent) 12%,transparent);
 }
 .hero-illust-visual{
-  width:100%;aspect-ratio:120/78;border-radius:10px;overflow:hidden;
+  position:relative;width:100%;aspect-ratio:120/78;border-radius:10px;overflow:hidden;
   background:color-mix(in srgb,var(--accent) 7%,var(--card));
-  display:flex;align-items:center;justify-content:center;
   min-height:4.5rem;
 }
-.hero-illust-img{
-  width:100%;height:100%;display:block;object-fit:contain;object-position:center;
+.hero-illust-mask{
+  position:absolute;inset:0;
+  background:var(--accent);
+  -webkit-mask-image:var(--illust);mask-image:var(--illust);
+  -webkit-mask-size:contain;mask-size:contain;
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+  -webkit-mask-mode:alpha;mask-mode:alpha;
 }
 .hero-illust-cap{
   display:block;margin-top:8px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--text);
@@ -764,19 +769,19 @@ footer{padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-
       </div>
       <div class="hero-illust-grid" role="group" aria-label="Domain illustrations for cloud, AI and ML, DevOps, and MLOps">
         <div class="hero-illust">
-          <div class="hero-illust-visual"><img src="assets/illust-cloud.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
+          <div class="hero-illust-visual"><div class="hero-illust-mask" style="--illust:url('assets/illust-cloud.svg')" aria-hidden="true"></div></div>
           <span class="hero-illust-cap">Cloud</span><span class="hero-illust-sub">VPC · IaC · scale-out</span>
         </div>
         <div class="hero-illust">
-          <div class="hero-illust-visual"><img src="assets/illust-ai-ml.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
+          <div class="hero-illust-visual"><div class="hero-illust-mask" style="--illust:url('assets/illust-ai-ml.svg')" aria-hidden="true"></div></div>
           <span class="hero-illust-cap">AI / ML</span><span class="hero-illust-sub">Training · inference · SageMaker</span>
         </div>
         <div class="hero-illust">
-          <div class="hero-illust-visual"><img src="assets/illust-devops.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
+          <div class="hero-illust-visual"><div class="hero-illust-mask" style="--illust:url('assets/illust-devops.svg')" aria-hidden="true"></div></div>
           <span class="hero-illust-cap">DevOps</span><span class="hero-illust-sub">CI/CD · GitOps · automation</span>
         </div>
         <div class="hero-illust">
-          <div class="hero-illust-visual"><img src="assets/illust-mlops.svg" alt="" class="hero-illust-img" width="240" height="156" loading="lazy" decoding="async"/></div>
+          <div class="hero-illust-visual"><div class="hero-illust-mask" style="--illust:url('assets/illust-mlops.svg')" aria-hidden="true"></div></div>
           <span class="hero-illust-cap">MLOps</span><span class="hero-illust-sub">Pipelines · monitoring · drift</span>
         </div>
       </div>

@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 78" fill="none">
-  <path stroke="#2563eb" stroke-opacity=".35" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" d="M18 64c0-14 12-26 28-26 3-16 18-28 36-28s33 12 36 28c16 0 28 12 28 26"/>
-  <path fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M22 62c0-11 9-20 20-20 2-13 15-22 30-22s28 9 30 22c11 0 20 9 20 20v2H22z"/>
-  <rect x="44" y="40" width="32" height="20" rx="3" stroke="#2563eb" stroke-width="1.55"/>
-  <path stroke="#2563eb" stroke-width="1.55" stroke-linecap="round" d="M50 48h20M50 54h12"/>
-  <circle cx="60" cy="22" r="5" fill="rgba(37,99,235,0.14)" stroke="#2563eb" stroke-width="1.2"/>
-  <path stroke="#2563eb" stroke-width="1.55" stroke-linecap="round" d="M60 27v13M42 35h10M68 35h10"/>
+  <path stroke="#fff" stroke-opacity=".35" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round" d="M18 64c0-14 12-26 28-26 3-16 18-28 36-28s33 12 36 28c16 0 28 12 28 26"/>
+  <path fill="rgba(255,255,255,0.14)" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" d="M22 62c0-11 9-20 20-20 2-13 15-22 30-22s28 9 30 22c11 0 20 9 20 20v2H22z"/>
+  <rect x="44" y="40" width="32" height="20" rx="3" stroke="#fff" stroke-width="1.55"/>
+  <path stroke="#fff" stroke-width="1.55" stroke-linecap="round" d="M50 48h20M50 54h12"/>
+  <circle cx="60" cy="22" r="5" fill="rgba(255,255,255,0.14)" stroke="#fff" stroke-width="1.2"/>
+  <path stroke="#fff" stroke-width="1.55" stroke-linecap="round" d="M60 27v13M42 35h10M68 35h10"/>
 </svg>
