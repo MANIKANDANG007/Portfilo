@@ -23,9 +23,19 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{
   scroll-behavior:smooth;
-  --ambient-a:color-mix(in srgb,var(--accent) 15%,transparent);
-  --ambient-b:color-mix(in srgb,#8b5cf6 10%,transparent);
-  transition:--ambient-a 1.1s cubic-bezier(.22,.61,.36,1),--ambient-b 1.1s cubic-bezier(.22,.61,.36,1);
+  min-height:100%;
+  background:var(--bg);
+  --ambient-a:color-mix(in srgb,var(--accent) 11%,transparent);
+  --ambient-b:color-mix(in srgb,var(--muted) 6%,transparent);
+  transition:background-color .35s ease,--ambient-a 1.1s cubic-bezier(.22,.61,.36,1),--ambient-b 1.1s cubic-bezier(.22,.61,.36,1);
+}
+html[data-bg-mood="hero"]{
+  --ambient-a:color-mix(in srgb,var(--accent) 16%,transparent);
+  --ambient-b:color-mix(in srgb,#326ce5 12%,transparent);
+}
+html[data-theme="dark"][data-bg-mood="hero"]{
+  --ambient-a:color-mix(in srgb,var(--accent) 22%,transparent);
+  --ambient-b:color-mix(in srgb,#5a8dee 14%,transparent);
 }
 :root{
   --accent:#2563eb;--accent-light:#eff6ff;
@@ -38,89 +48,133 @@ html{
   --btn-bg:#f0f0f0;--btn-text:#111;
 }
 html[data-bg-mood="about"]{
-  --ambient-a:color-mix(in srgb,#0d9488 13%,transparent);
-  --ambient-b:color-mix(in srgb,#0284c7 14%,transparent);
+  --ambient-a:color-mix(in srgb,#ff9900 11%,transparent);
+  --ambient-b:color-mix(in srgb,#0078d4 12%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="about"]{
-  --ambient-a:color-mix(in srgb,#2dd4bf 18%,transparent);
-  --ambient-b:color-mix(in srgb,#38bdf8 16%,transparent);
+  --ambient-a:color-mix(in srgb,#ffb84d 13%,transparent);
+  --ambient-b:color-mix(in srgb,#4da3ff 12%,transparent);
 }
 html[data-bg-mood="timeline"]{
-  --ambient-a:color-mix(in srgb,var(--accent) 18%,transparent);
-  --ambient-b:color-mix(in srgb,#6366f1 12%,transparent);
+  --ambient-a:color-mix(in srgb,var(--accent) 17%,transparent);
+  --ambient-b:color-mix(in srgb,#9333ea 13%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="timeline"]{
   --ambient-a:color-mix(in srgb,var(--accent) 24%,transparent);
-  --ambient-b:color-mix(in srgb,#818cf8 14%,transparent);
+  --ambient-b:color-mix(in srgb,#c084fc 14%,transparent);
 }
 html[data-bg-mood="skills"]{
-  --ambient-a:color-mix(in srgb,var(--accent) 16%,transparent);
-  --ambient-b:color-mix(in srgb,#06b6d4 11%,transparent);
+  --ambient-a:color-mix(in srgb,#7b42bc 12%,transparent);
+  --ambient-b:color-mix(in srgb,#0891b2 12%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="skills"]{
-  --ambient-a:color-mix(in srgb,var(--accent) 22%,transparent);
-  --ambient-b:color-mix(in srgb,#22d3ee 14%,transparent);
+  --ambient-a:color-mix(in srgb,#a78bfa 14%,transparent);
+  --ambient-b:color-mix(in srgb,#22d3ee 13%,transparent);
 }
 html[data-bg-mood="skills-cloud"]{
-  --ambient-a:color-mix(in srgb,#f59e0b 14%,transparent);
-  --ambient-b:color-mix(in srgb,#38bdf8 13%,transparent);
+  --ambient-a:color-mix(in srgb,#ff9900 15%,transparent);
+  --ambient-b:color-mix(in srgb,#4285f4 11%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="skills-cloud"]{
-  --ambient-a:color-mix(in srgb,#fbbf24 16%,transparent);
-  --ambient-b:color-mix(in srgb,#0ea5e9 15%,transparent);
+  --ambient-a:color-mix(in srgb,#ffb84d 16%,transparent);
+  --ambient-b:color-mix(in srgb,#6aa7ff 13%,transparent);
 }
 html[data-bg-mood="skills-containers"]{
-  --ambient-a:color-mix(in srgb,#326ce5 15%,transparent);
-  --ambient-b:color-mix(in srgb,#2496ed 12%,transparent);
+  --ambient-a:color-mix(in srgb,#326ce5 16%,transparent);
+  --ambient-b:color-mix(in srgb,#2496ed 13%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="skills-containers"]{
-  --ambient-a:color-mix(in srgb,#4d7de0 18%,transparent);
-  --ambient-b:color-mix(in srgb,#2d9cdb 16%,transparent);
+  --ambient-a:color-mix(in srgb,#5889ea 18%,transparent);
+  --ambient-b:color-mix(in srgb,#4db8ed 15%,transparent);
 }
 html[data-bg-mood="skills-iac"]{
-  --ambient-a:color-mix(in srgb,#7b42bc 16%,transparent);
-  --ambient-b:color-mix(in srgb,var(--accent) 12%,transparent);
+  --ambient-a:color-mix(in srgb,#7b42bc 18%,transparent);
+  --ambient-b:color-mix(in srgb,#1c9963 10%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="skills-iac"]{
-  --ambient-a:color-mix(in srgb,#a78bfa 18%,transparent);
-  --ambient-b:color-mix(in srgb,var(--accent) 15%,transparent);
+  --ambient-a:color-mix(in srgb,#c4b5fd 15%,transparent);
+  --ambient-b:color-mix(in srgb,#34d399 11%,transparent);
 }
 html[data-bg-mood="skills-cicd"]{
-  --ambient-a:color-mix(in srgb,#0891b2 14%,transparent);
-  --ambient-b:color-mix(in srgb,#059669 12%,transparent);
+  --ambient-a:color-mix(in srgb,#343434 11%,transparent);
+  --ambient-b:color-mix(in srgb,#2496ed 13%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="skills-cicd"]{
-  --ambient-a:color-mix(in srgb,#22d3ee 17%,transparent);
-  --ambient-b:color-mix(in srgb,#34d399 14%,transparent);
+  --ambient-a:color-mix(in srgb,#a3a3a3 12%,transparent);
+  --ambient-b:color-mix(in srgb,#38bdf8 14%,transparent);
 }
 html[data-bg-mood="skills-observe"]{
-  --ambient-a:color-mix(in srgb,#e11d48 12%,transparent);
-  --ambient-b:color-mix(in srgb,#ea580c 11%,transparent);
+  --ambient-a:color-mix(in srgb,#e6522c 13%,transparent);
+  --ambient-b:color-mix(in srgb,#f46800 11%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="skills-observe"]{
-  --ambient-a:color-mix(in srgb,#fb7185 16%,transparent);
-  --ambient-b:color-mix(in srgb,#fb923c 14%,transparent);
+  --ambient-a:color-mix(in srgb,#ff8a65 14%,transparent);
+  --ambient-b:color-mix(in srgb,#ffa726 12%,transparent);
 }
 html[data-bg-mood="skills-lang"]{
-  --ambient-a:color-mix(in srgb,#3b82f6 13%,transparent);
-  --ambient-b:color-mix(in srgb,#64748b 12%,transparent);
+  --ambient-a:color-mix(in srgb,#3776ab 14%,transparent);
+  --ambient-b:color-mix(in srgb,#ffd43b 10%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="skills-lang"]{
-  --ambient-a:color-mix(in srgb,#60a5fa 16%,transparent);
-  --ambient-b:color-mix(in srgb,#94a3b8 14%,transparent);
+  --ambient-a:color-mix(in srgb,#64b5f6 15%,transparent);
+  --ambient-b:color-mix(in srgb,#ffe082 11%,transparent);
 }
 html[data-bg-mood="contact"]{
-  --ambient-a:color-mix(in srgb,var(--accent) 14%,transparent);
-  --ambient-b:color-mix(in srgb,#a855f7 9%,transparent);
+  --ambient-a:color-mix(in srgb,var(--accent) 15%,transparent);
+  --ambient-b:color-mix(in srgb,#0d9488 10%,transparent);
 }
 html[data-theme="dark"][data-bg-mood="contact"]{
   --ambient-a:color-mix(in srgb,var(--accent) 20%,transparent);
-  --ambient-b:color-mix(in srgb,#c084fc 12%,transparent);
+  --ambient-b:color-mix(in srgb,#2dd4bf 12%,transparent);
 }
 @media (prefers-reduced-motion:reduce){
   html{transition:none}
 }
-body{font-family:'Inter',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;transition:background .3s,color .3s}
+body{
+  font-family:'Inter',system-ui,sans-serif;color:var(--text);
+  background:transparent;min-height:100%;
+  line-height:1.6;transition:color .3s;
+  position:relative;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(ellipse 120% 85% at 88% 8%,color-mix(in srgb,#326ce5 26%,transparent),transparent 58%),
+    radial-gradient(ellipse 90% 75% at 6% 38%,color-mix(in srgb,#7b42bc 22%,transparent),transparent 52%),
+    radial-gradient(ellipse 85% 70% at 70% 92%,color-mix(in srgb,#0891b2 20%,transparent),transparent 55%),
+    radial-gradient(ellipse 75% 65% at 38% 15%,color-mix(in srgb,#9333ea 20%,transparent),transparent 50%),
+    radial-gradient(ellipse 70% 55% at 22% 88%,color-mix(in srgb,#ff9900 17%,transparent),transparent 48%),
+    radial-gradient(ellipse 60% 50% at 52% 48%,color-mix(in srgb,#3776ab 14%,transparent),transparent 45%);
+  transition:background-color .35s ease;
+}
+[data-theme="dark"] body::before{
+  background-image:
+    radial-gradient(ellipse 120% 85% at 88% 8%,color-mix(in srgb,#5889ea 28%,transparent),transparent 58%),
+    radial-gradient(ellipse 90% 75% at 6% 38%,color-mix(in srgb,#c4b5fd 22%,transparent),transparent 52%),
+    radial-gradient(ellipse 85% 70% at 70% 92%,color-mix(in srgb,#22d3ee 20%,transparent),transparent 55%),
+    radial-gradient(ellipse 75% 65% at 38% 15%,color-mix(in srgb,#c084fc 20%,transparent),transparent 50%),
+    radial-gradient(ellipse 70% 55% at 22% 88%,color-mix(in srgb,#ffb84d 17%,transparent),transparent 48%),
+    radial-gradient(ellipse 60% 50% at 52% 48%,color-mix(in srgb,#64b5f6 15%,transparent),transparent 45%);
+}
+.page-bg-deco{
+  position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+}
+.page-bg-deco .page-bg-ico{
+  position:absolute;display:block;width:var(--bw,72px);height:auto;
+  opacity:.16;filter:grayscale(1) contrast(1.08);
+  transform:translate3d(0,0,0) scale(1.14) rotate(var(--br,0deg));
+}
+[data-theme="dark"] .page-bg-deco .page-bg-ico{
+  opacity:.22;filter:grayscale(1) brightness(0) invert(1) contrast(1.05);
+}
+@media (max-width:900px){
+  .page-bg-deco .page-bg-ico{opacity:.13;width:var(--bwm,var(--bw,64px));transform:translate3d(0,0,0) scale(1.1) rotate(var(--br,0deg))}
+  [data-theme="dark"] .page-bg-deco .page-bg-ico{opacity:.18}
+}
+@media (max-width:680px){
+  .page-bg-deco .page-bg-ico:nth-child(n+22){display:none}
+}
 body.nav-open{overflow:hidden}
 a{color:inherit;text-decoration:none}
 
@@ -269,10 +323,48 @@ a:focus-visible,button:focus-visible,.color-dot:focus-visible{
 .color-dot:hover,.color-dot.active{transform:scale(1.25);border-color:var(--text)}
 
 section{padding:120px 6vw 80px}
+main{position:relative;z-index:1}
+main>section{position:relative;z-index:1}
+main>.page-bg-deco{z-index:0}
+.section-surface{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  opacity:.58;
+  transition:background .9s cubic-bezier(.22,.61,.36,1),opacity .35s ease;
+}
+#about>.section-surface{
+  background:linear-gradient(168deg,
+    color-mix(in srgb,var(--bg2) 86%,var(--ambient-a) 14%),
+    color-mix(in srgb,var(--bg2) 88%,var(--ambient-b) 12%)
+  );
+}
+#timeline>.section-surface{
+  background:linear-gradient(178deg,
+    color-mix(in srgb,var(--bg) 91%,var(--ambient-a) 9%),
+    color-mix(in srgb,var(--bg) 93%,var(--ambient-b) 7%)
+  );
+}
+#skills>.section-surface{
+  background:linear-gradient(198deg,
+    color-mix(in srgb,var(--bg2) 86%,var(--ambient-a) 14%),
+    color-mix(in srgb,var(--bg2) 88%,var(--ambient-b) 12%)
+  );
+}
+#contact>.section-surface{
+  background:linear-gradient(186deg,
+    color-mix(in srgb,var(--bg) 92%,var(--ambient-a) 8%),
+    color-mix(in srgb,var(--bg) 94%,var(--ambient-b) 6%)
+  );
+}
+footer>.section-surface{
+  background:linear-gradient(180deg,
+    color-mix(in srgb,var(--bg) 94%,var(--ambient-b) 6%),
+    var(--bg)
+  );
+}
 .max{max-width:960px;margin:0 auto}
 
-/* Hero */
-#hero{min-height:100vh;display:flex;align-items:center;padding-top:60px;position:relative;overflow:hidden}
+/* Hero — transparent so global mesh + tool watermarks show through */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:60px;position:relative;overflow:hidden;background:transparent}
 #hero::before{
   content:'';position:absolute;inset:-20% 50% 40% -30%;pointer-events:none;
   background:radial-gradient(ellipse 80% 60% at 70% 20%,var(--ambient-a),transparent 68%),
@@ -469,17 +561,13 @@ h1 em{font-style:normal;color:var(--accent)}
 
 /* About */
 #about{
-  background:linear-gradient(168deg,
-    color-mix(in srgb,var(--bg2) 86%,var(--ambient-a) 14%),
-    color-mix(in srgb,var(--bg2) 88%,var(--ambient-b) 12%)
-  );
+  background:transparent;
   position:relative;
   isolation:isolate;
   overflow:hidden;
-  transition:background .9s cubic-bezier(.22,.61,.36,1);
 }
 #about::before{
-  content:'';position:absolute;inset:0;pointer-events:none;z-index:0;
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;
   opacity:.65;
   background-image:radial-gradient(circle at 1.5px 1.5px,color-mix(in srgb,var(--muted) 22%,transparent) 1.2px,transparent 0);
   background-size:26px 26px;
@@ -487,12 +575,12 @@ h1 em{font-style:normal;color:var(--accent)}
   -webkit-mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent);
 }
 #about::after{
-  content:'';position:absolute;width:min(480px,90vw);height:min(480px,90vw);right:-18%;top:20%;pointer-events:none;z-index:0;
+  content:'';position:absolute;width:min(480px,90vw);height:min(480px,90vw);right:-18%;top:20%;pointer-events:none;z-index:1;
   border-radius:50%;
   background:radial-gradient(circle,color-mix(in srgb,var(--ambient-a) 55%,var(--accent) 35%),transparent 68%);
   animation:aboutOrb 16s ease-in-out infinite alternate;
 }
-#about>.max{position:relative;z-index:1}
+#about>.max{position:relative;z-index:2}
 @keyframes aboutOrb{
   from{transform:translate(0,0) scale(1);opacity:.9}
   to{transform:translate(-24px,20px) scale(1.08);opacity:1}
@@ -500,17 +588,13 @@ h1 em{font-style:normal;color:var(--accent)}
 
 /* Skills section pattern */
 #skills{
-  background:linear-gradient(198deg,
-    color-mix(in srgb,var(--bg2) 86%,var(--ambient-a) 14%),
-    color-mix(in srgb,var(--bg2) 88%,var(--ambient-b) 12%)
-  );
+  background:transparent;
   position:relative;
   isolation:isolate;
   overflow:hidden;
-  transition:background .9s cubic-bezier(.22,.61,.36,1);
 }
 #skills::before{
-  content:'';position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  content:'';position:absolute;inset:0;pointer-events:none;z-index:1;opacity:.5;
   background-image:
     linear-gradient(118deg,color-mix(in srgb,var(--accent) 6%,transparent) 12%,transparent 12.2%),
     linear-gradient(292deg,color-mix(in srgb,var(--border) 35%,transparent) 11%,transparent 11.15%),
@@ -521,7 +605,7 @@ h1 em{font-style:normal;color:var(--accent)}
   mask-image:radial-gradient(ellipse 88% 72% at 58% 42%,#000 32%,transparent 72%);
   -webkit-mask-image:radial-gradient(ellipse 88% 72% at 58% 42%,#000 32%,transparent 72%);
 }
-#skills>.max{position:relative;z-index:1}
+#skills>.max{position:relative;z-index:2}
 
 @keyframes skillsPatternDrift{
   to{background-position:0 0,0 0,22px 22px}
@@ -586,12 +670,11 @@ h2{font-size:clamp(22px,3vw,34px);font-weight:600;letter-spacing:-.7px;line-heig
 
 /* Timeline */
 #timeline{
-  background:linear-gradient(178deg,
-    color-mix(in srgb,var(--bg) 91%,var(--ambient-a) 9%),
-    color-mix(in srgb,var(--bg) 93%,var(--ambient-b) 7%)
-  );
-  transition:background .9s cubic-bezier(.22,.61,.36,1);
+  position:relative;
+  background:transparent;
+  overflow:hidden;
 }
+#timeline>.max{position:relative;z-index:1}
 .tl{position:relative;padding-left:28px;margin-top:12px}
 .tl::before{
   content:'';position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--border);
@@ -663,12 +746,11 @@ h2{font-size:clamp(22px,3vw,34px);font-weight:600;letter-spacing:-.7px;line-heig
 
 /* Contact */
 #contact{
-  background:linear-gradient(186deg,
-    color-mix(in srgb,var(--bg) 92%,var(--ambient-a) 8%),
-    color-mix(in srgb,var(--bg) 94%,var(--ambient-b) 6%)
-  );
-  transition:background .9s cubic-bezier(.22,.61,.36,1);
+  position:relative;
+  background:transparent;
+  overflow:hidden;
 }
+#contact>.max{position:relative;z-index:1}
 .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
 .contact-links{display:flex;flex-direction:column;gap:14px;margin-top:8px}
 .contact-link{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted);transition:color .25s,transform .25s ease}
@@ -701,17 +783,17 @@ h2{font-size:clamp(22px,3vw,34px);font-weight:600;letter-spacing:-.7px;line-heig
 .form-submit .ico{width:18px;height:18px;stroke:#fff}
 .form-submit:hover{opacity:.95;transform:translateY(-2px);box-shadow:0 10px 28px color-mix(in srgb,var(--accent) 35%,transparent)}
 .form-submit:active{transform:translateY(0)}
+.form-submit:disabled{opacity:.65;cursor:not-allowed;transform:none}
 .form-hint{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.5}
 .form-msg{margin-top:12px;font-size:13px;text-align:center;color:var(--muted);min-height:18px}
 
 footer{
   padding:36px 6vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
-  background:linear-gradient(180deg,
-    color-mix(in srgb,var(--bg) 94%,var(--ambient-b) 6%),
-    var(--bg)
-  );
-  transition:background .9s cubic-bezier(.22,.61,.36,1);
+  position:relative;z-index:1;
+  background:transparent;
+  overflow:hidden;
 }
+footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
 .footer-left{font-size:14px;font-weight:600}
 .footer-right{display:flex;gap:24px}
 .footer-right a{font-size:13px;color:var(--muted);transition:color .2s}
@@ -785,7 +867,7 @@ footer{
   #btt{transition:opacity .15s}
   #btt:hover{transform:none!important}
   body{transition:none}
-  #about,#skills,#timeline,#contact,footer{transition:none!important}
+  #about,#skills,#timeline,#contact,footer,.section-surface{transition:none!important}
   .nav-menu{transition:max-height .01s,opacity .01s,padding .01s,visibility .01s}
   .hero-grid{animation:none!important;opacity:.35}
   .hero-blobs .blob{animation:none!important}
@@ -843,6 +925,48 @@ footer{
 </nav>
 
 <main id="main" tabindex="-1">
+
+<div class="page-bg-deco" aria-hidden="true">
+  <img class="page-bg-ico" style="top:4%;left:2%;--bw:100px;--br:-14deg;--bwm:72px" src="https://unpkg.com/simple-icons@11.14.0/icons/kubernetes.svg" alt="" width="100" height="100" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:6%;right:4%;left:auto;--bw:92px;--br:10deg;--bwm:68px" src="https://unpkg.com/simple-icons@11.14.0/icons/docker.svg" alt="" width="92" height="92" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:22%;left:-1%;--bw:78px;--br:-6deg;--bwm:56px" src="https://unpkg.com/simple-icons@11.14.0/icons/terraform.svg" alt="" width="78" height="78" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:18%;right:8%;left:auto;--bw:84px;--br:15deg;--bwm:60px" src="https://unpkg.com/simple-icons@11.14.0/icons/amazonaws.svg" alt="" width="84" height="84" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:42%;left:4%;--bw:74px;--br:7deg;--bwm:54px" src="https://unpkg.com/simple-icons@11.14.0/icons/githubactions.svg" alt="" width="74" height="74" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:38%;right:2%;left:auto;--bw:90px;--br:-11deg;--bwm:64px" src="https://unpkg.com/simple-icons@11.14.0/icons/python.svg" alt="" width="90" height="90" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:52%;left:18%;--bw:68px;--br:-9deg;--bwm:52px" src="https://unpkg.com/simple-icons@11.14.0/icons/pytorch.svg" alt="" width="68" height="68" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:58%;right:14%;left:auto;--bw:72px;--br:12deg;--bwm:54px" src="https://unpkg.com/simple-icons@11.14.0/icons/googlecloud.svg" alt="" width="72" height="72" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:72%;left:6%;--bw:86px;--br:6deg;--bwm:62px" src="https://unpkg.com/simple-icons@11.14.0/icons/jupyter.svg" alt="" width="86" height="86" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:68%;right:6%;left:auto;--bw:80px;--br:-8deg;--bwm:58px" src="https://unpkg.com/simple-icons@11.14.0/icons/prometheus.svg" alt="" width="80" height="80" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:8%;left:12%;top:auto;--bw:76px;--br:-5deg;--bwm:56px" src="https://unpkg.com/simple-icons@11.14.0/icons/circleci.svg" alt="" width="76" height="76" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:12%;right:10%;left:auto;top:auto;--bw:88px;--br:14deg;--bwm:64px" src="https://unpkg.com/simple-icons@11.14.0/icons/microsoftazure.svg" alt="" width="88" height="88" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:48%;left:42%;--bw:64px;--br:18deg;--bwm:48px" src="https://unpkg.com/simple-icons@11.14.0/icons/tensorflow.svg" alt="" width="64" height="64" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:28%;left:52%;--bw:70px;--br:-16deg;--bwm:52px" src="https://unpkg.com/simple-icons@11.14.0/icons/scikitlearn.svg" alt="" width="70" height="70" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:11%;left:34%;--bw:62px;--br:11deg;--bwm:48px" src="https://unpkg.com/simple-icons@11.14.0/icons/helm.svg" alt="" width="62" height="62" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:33%;right:18%;left:auto;--bw:64px;--br:-7deg;--bwm:50px" src="https://unpkg.com/simple-icons@11.14.0/icons/ansible.svg" alt="" width="64" height="64" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:62%;left:30%;--bw:66px;--br:9deg;--bwm:50px" src="https://unpkg.com/simple-icons@11.14.0/icons/jenkins.svg" alt="" width="66" height="66" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:18%;left:38%;top:auto;--bw:60px;--br:-12deg;--bwm:46px" src="https://unpkg.com/simple-icons@11.14.0/icons/apachekafka.svg" alt="" width="60" height="60" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:15%;right:22%;left:auto;--bw:58px;--br:14deg;--bwm:46px" src="https://unpkg.com/simple-icons@11.14.0/icons/nomad.svg" alt="" width="58" height="58" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:46%;left:10%;--bw:56px;--br:-18deg;--bwm:44px" src="https://unpkg.com/simple-icons@11.14.0/icons/consul.svg" alt="" width="56" height="56" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:78%;right:24%;left:auto;--bw:62px;--br:7deg;--bwm:48px" src="https://unpkg.com/simple-icons@11.14.0/icons/argo.svg" alt="" width="62" height="62" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:54%;left:56%;--bw:58px;--br:-10deg;--bwm:46px" src="https://unpkg.com/simple-icons@11.14.0/icons/git.svg" alt="" width="58" height="58" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:26%;right:18%;left:auto;top:auto;--bw:64px;--br:16deg;--bwm:50px" src="https://unpkg.com/simple-icons@11.14.0/icons/gnubash.svg" alt="" width="64" height="64" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:36%;left:72%;--bw:54px;--br:19deg;--bwm:44px" src="https://unpkg.com/simple-icons@11.14.0/icons/mlflow.svg" alt="" width="54" height="54" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:34%;left:4%;top:auto;--bw:58px;--br:-4deg;--bwm:46px" src="https://unpkg.com/simple-icons@11.14.0/icons/redis.svg" alt="" width="58" height="58" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:84%;left:44%;--bw:60px;--br:-13deg;--bwm:46px" src="https://unpkg.com/simple-icons@11.14.0/icons/linux.svg" alt="" width="60" height="60" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:64%;right:2%;left:auto;--bw:56px;--br:20deg;--bwm:44px" src="https://unpkg.com/simple-icons@11.14.0/icons/nginx.svg" alt="" width="56" height="56" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:8%;left:86%;--bw:58px;--br:-17deg;--bwm:46px" src="https://unpkg.com/simple-icons@11.14.0/icons/grafana.svg" alt="" width="58" height="58" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:5%;right:6%;left:auto;top:auto;--bw:56px;--br:11deg;--bwm:44px" src="https://unpkg.com/simple-icons@11.14.0/icons/elasticsearch.svg" alt="" width="56" height="56" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:92%;left:16%;--bw:60px;--br:8deg;--bwm:48px" src="https://unpkg.com/simple-icons@11.14.0/icons/mongodb.svg" alt="" width="60" height="60" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:25%;right:1%;left:auto;--bw:54px;--br:-19deg;--bwm:42px" src="https://unpkg.com/simple-icons@11.14.0/icons/postgresql.svg" alt="" width="54" height="54" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:40%;left:90%;top:auto;--bw:52px;--br:14deg;--bwm:40px" src="https://unpkg.com/simple-icons@11.14.0/icons/rabbitmq.svg" alt="" width="52" height="52" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:3%;left:74%;--bw:62px;--br:-6deg;--bwm:48px" src="https://unpkg.com/simple-icons@11.14.0/icons/visualstudiocode.svg" alt="" width="62" height="62" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:3%;left:14%;top:auto;--bw:58px;--br:22deg;--bwm:46px" src="https://unpkg.com/simple-icons@11.14.0/icons/databricks.svg" alt="" width="58" height="58" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:74%;left:88%;--bw:56px;--br:-11deg;--bwm:44px" src="https://unpkg.com/simple-icons@11.14.0/icons/openai.svg" alt="" width="56" height="56" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:14%;right:28%;left:auto;--bw:50px;--br:16deg;--bwm:40px" src="https://unpkg.com/simple-icons@11.14.0/icons/amazoncloudwatch.svg" alt="" width="50" height="50" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:16%;right:88%;left:auto;top:auto;--bw:54px;--br:-8deg;--bwm:42px" src="https://unpkg.com/simple-icons@11.14.0/icons/datadog.svg" alt="" width="54" height="54" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="top:60%;right:90%;left:auto;--bw:60px;--br:9deg;--bwm:46px" src="https://unpkg.com/simple-icons@11.14.0/icons/istio.svg" alt="" width="60" height="60" decoding="async" referrerpolicy="no-referrer"/>
+  <img class="page-bg-ico" style="bottom:8%;left:2%;top:auto;--bw:64px;--br:-14deg;--bwm:50px" src="https://unpkg.com/simple-icons@11.14.0/icons/opentelemetry.svg" alt="" width="64" height="64" decoding="async" referrerpolicy="no-referrer"/>
+</div>
 
 <!-- Hero -->
 <section id="hero">
@@ -965,6 +1089,7 @@ footer{
 
 <!-- About -->
 <section id="about">
+  <div class="section-surface" aria-hidden="true"></div>
   <div class="max">
     <div class="about-grid">
       <div class="reveal">
@@ -996,6 +1121,7 @@ footer{
 
 <!-- Timeline -->
 <section id="timeline">
+  <div class="section-surface" aria-hidden="true"></div>
   <div class="max">
     <div class="reveal" style="margin-bottom:48px">
       <p class="section-label">Journey</p>
@@ -1033,6 +1159,7 @@ footer{
 
 <!-- Skills -->
 <section id="skills">
+  <div class="section-surface" aria-hidden="true"></div>
   <div class="max">
     <div style="margin-bottom:48px" class="reveal">
       <p class="section-label">Technical skills</p>
@@ -1051,6 +1178,7 @@ footer{
 
 <!-- Contact -->
 <section id="contact">
+  <div class="section-surface" aria-hidden="true"></div>
   <div class="max">
     <div class="contact-grid">
       <div class="reveal">
@@ -1068,7 +1196,7 @@ footer{
         <div class="form-group"><label for="femail">Email address</label><input type="email" id="femail" name="email" autocomplete="email" placeholder="jane@example.com"/></div>
         <div class="form-group"><label for="fmsg">Message</label><textarea id="fmsg" name="message" placeholder="Tell me about your project..."></textarea></div>
         <button type="button" class="form-submit" id="formSubmit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>Send message</button>
-        <p class="form-hint">Opens your email app with this message addressed to dmanirk07@gmail.com.</p>
+        <p class="form-hint">With a <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer">Web3Forms</a> key in the page script, messages send in the browser. Without a key (or while previewing a local file), the button opens your email app instead.</p>
         <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
       </div>
     </div>
@@ -1078,6 +1206,7 @@ footer{
 </main>
 
 <footer>
+  <div class="section-surface" aria-hidden="true"></div>
   <div class="footer-left">Manikandan G</div>
   <div class="footer-right">
     <a href="mailto:dmanirk07@gmail.com"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>Email</a>
@@ -1283,20 +1412,53 @@ btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:reduceMotion?'a
 
 const formSubmit=document.getElementById('formSubmit');
 const CONTACT_EMAIL='dmanirk07@gmail.com';
-formSubmit.addEventListener('click',()=>{
+const WEB3FORMS_ACCESS_KEY='bd7f5def-2fc5-467d-8acc-6eb5a1d33849';
+formSubmit.addEventListener('click',async()=>{
   const n=document.getElementById('fname').value.trim();
   const e=document.getElementById('femail').value.trim();
   const m=document.getElementById('fmsg').value.trim();
   const msg=document.getElementById('formMsg');
   if(!n||!e||!m){msg.textContent='Please fill in all fields.';return;}
   if(!/\S+@\S+\.\S+/.test(e)){msg.textContent='Please enter a valid email.';return;}
-  const subject=encodeURIComponent('Portfolio contact from '+n);
-  const body=encodeURIComponent('From: '+n+'\nReply-To: '+e+'\n\n'+m);
-  window.location.href='mailto:'+CONTACT_EMAIL+'?subject='+subject+'&body='+body;
-  msg.textContent='If your mail app did not open, email '+CONTACT_EMAIL+' directly.';
-  document.getElementById('fname').value='';
-  document.getElementById('femail').value='';
-  document.getElementById('fmsg').value='';
+  if(!WEB3FORMS_ACCESS_KEY||WEB3FORMS_ACCESS_KEY.length<16){
+    const subject=encodeURIComponent('Portfolio contact from '+n);
+    const body=encodeURIComponent('From: '+n+'\nReply-To: '+e+'\n\n'+m);
+    window.location.href='mailto:'+CONTACT_EMAIL+'?subject='+subject+'&body='+body;
+    msg.textContent=location.protocol==='file:'
+      ?'Opening your email app — send the message there. For in-page send: host on HTTPS and add your Web3Forms key in index.html.'
+      :'Opening your email app. Add WEB3FORMS_ACCESS_KEY in index.html to send without leaving the page.';
+    return;
+  }
+  msg.textContent='Sending…';
+  formSubmit.disabled=true;
+  try{
+    const res=await fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        access_key:WEB3FORMS_ACCESS_KEY,
+        subject:'Portfolio contact from '+n,
+        name:n,
+        email:e,
+        message:m,
+        from_name:'Portfolio — '+n
+      })
+    });
+    const data=await res.json().catch(()=>({}));
+    if(res.ok&&(data.success===true||data.success==='true')){
+      msg.textContent='Thanks — message sent. I will get back to you soon.';
+      document.getElementById('fname').value='';
+      document.getElementById('femail').value='';
+      document.getElementById('fmsg').value='';
+    }else{
+      msg.textContent=(data.message||'Could not send. ')+' Email '+CONTACT_EMAIL+' directly.';
+    }
+  }catch{
+    msg.textContent=location.protocol==='file:'
+      ?'Web3Forms needs the site served over HTTPS (not file://). Deploy to GitHub Pages etc., or email '+CONTACT_EMAIL+' directly.'
+      :'Network error. Email '+CONTACT_EMAIL+' directly.';
+  }
+  formSubmit.disabled=false;
 });
 </script>
 </body>
