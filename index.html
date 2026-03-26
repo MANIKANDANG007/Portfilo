@@ -2,7 +2,7 @@
 <html lang="en" data-bg-mood="hero">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>Manikandan G – Cloud &amp; DevOps Engineer</title>
 <meta name="description" content="Cloud &amp; DevOps Engineer — AWS, Azure, GCP, CI/CD, Kubernetes, Terraform. Building resilient infrastructure at scale. Bangalore, India."/>
 <meta name="theme-color" content="#2563eb"/>
@@ -539,7 +539,8 @@ h1 em{font-style:normal;color:var(--accent)}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 .hero-sub{font-size:17px;color:var(--muted);line-height:1.75;max-width:520px;margin-bottom:22px}
 .daily-quote{
-  margin:0 0 26px;padding:14px 17px 16px;max-width:520px;border-radius:14px;
+  margin:0 0 26px;padding:14px 17px 16px;max-width:min(520px,100%);min-width:0;width:100%;
+  border-radius:14px;
   border:1px solid color-mix(in srgb,var(--accent) 20%,var(--border));
   background:color-mix(in srgb,var(--accent-light) 52%,var(--card));
 }
@@ -550,9 +551,13 @@ h1 em{font-style:normal;color:var(--accent)}
 .daily-quote-label{
   font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 8px;
 }
-.daily-quote-text{margin:0;font-size:15px;line-height:1.65;font-weight:500;color:var(--text)}
+.daily-quote-text{
+  margin:0;font-size:15px;line-height:1.65;font-weight:500;color:var(--text);
+  overflow-wrap:break-word;word-wrap:break-word;word-break:break-word;
+}
 @media (max-width:680px){
-  .daily-quote-text{font-size:14px}
+  .daily-quote{padding:12px 14px 14px;margin-bottom:22px;border-radius:12px}
+  .daily-quote-text{font-size:14px;line-height:1.62;-webkit-text-size-adjust:100%}
 }
 .btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn{
@@ -817,7 +822,7 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
 
 /* Back to top */
 #btt{
-  position:fixed;bottom:28px;right:28px;width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;
+  position:fixed;bottom:max(28px, env(safe-area-inset-bottom, 0px));right:max(28px, env(safe-area-inset-right, 0px));width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;border:none;cursor:pointer;
   display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s,transform .2s,box-shadow .25s;z-index:88;
 }
 #btt svg{width:20px;height:20px}
@@ -837,6 +842,7 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
 }
 
 @media(max-width:680px){
+  section{padding-left:max(6vw, calc(env(safe-area-inset-left, 0px) + 10px));padding-right:max(6vw, calc(env(safe-area-inset-right, 0px) + 10px))}
   .about-grid,.contact-grid{grid-template-columns:1fr}
   .avatar{display:none}
   .hero-stats{gap:24px}
