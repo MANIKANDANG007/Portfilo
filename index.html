@@ -9,14 +9,26 @@
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Manikandan G – Cloud &amp; DevOps Engineer"/>
 <meta property="og:description" content="Cloud &amp; DevOps engineer specializing in multi-cloud, CI/CD, Kubernetes, and infrastructure automation."/>
-<meta property="og:url" content="https://your-domain.example/"/>
+<meta property="og:url" content="https://manikandang007.github.io/Portfilo/"/>
+<link rel="canonical" href="https://manikandang007.github.io/Portfilo/"/>
+<meta property="og:image" content="https://manikandang007.github.io/Portfilo/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Manikandan G — Cloud &amp; DevOps Engineer"/>
 <meta property="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://manikandang007.github.io/Portfilo/og-image.png"/>
+<meta name="twitter:image:alt" content="Manikandan G — Cloud &amp; DevOps Engineer"/>
 <meta property="twitter:title" content="Manikandan G – Cloud &amp; DevOps Engineer"/>
 <meta property="twitter:description" content="Cloud &amp; DevOps engineer specializing in multi-cloud, CI/CD, Kubernetes, and infrastructure automation."/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="dns-prefetch" href="https://unpkg.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Manikandan G — Portfolio","url":"https://manikandang007.github.io/Portfilo/"},{"@type":"Person","name":"Manikandan G","jobTitle":"Cloud & DevOps Engineer","email":"dmanirk07@gmail.com","url":"https://manikandang007.github.io/Portfilo/","address":{"@type":"PostalAddress","addressLocality":"Bangalore","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/manikandan-g-4b0331123"]}]}
+</script>
 <style>
 @property --ambient-a{syntax:'<color>';inherits:true;initial-value:rgba(0,0,0,0)}
 @property --ambient-b{syntax:'<color>';inherits:true;initial-value:rgba(0,0,0,0)}
@@ -1000,7 +1012,7 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
       Cloud &amp; DevOps Engineer
     </p>
-    <h1>Building <em><span class="typed-wrap" id="typed"></span><span class="cursor" aria-hidden="true"></span></em><br/>cloud infrastructure<br/>at scale.</h1>
+    <h1 aria-label="Building resilient, scalable, automated, secure cloud infrastructure at scale.">Building <em><span class="typed-wrap" id="typed"></span><span class="cursor" aria-hidden="true"></span></em><br/>cloud infrastructure<br/>at scale.</h1>
     <p class="hero-sub">4+ years designing, automating, and securing large-scale cloud systems across AWS, Azure, and GCP — from CI/CD pipelines to AI/ML-driven operations.</p>
     <aside class="daily-quote" aria-labelledby="dailyQuoteHeading">
       <p class="daily-quote-label" id="dailyQuoteHeading">Quick spark</p>
@@ -1036,9 +1048,9 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
         <div class="hero-photo-crop">
         <div class="hero-photo-base" aria-hidden="true">
           <span>MG</span>
-          <span>Add <strong>hero-photo.jpg</strong> next to this HTML file for your portrait.</span>
+          <span>Replace <strong>hero-photo.jpg</strong> with your own portrait when ready.</span>
         </div>
-        <img src="hero-photo.jpg" alt="Manikandan G — Cloud &amp; DevOps Engineer" class="hero-photo" width="400" height="500" loading="lazy" decoding="async"/>
+        <img src="hero-photo.jpg" alt="Manikandan G — Cloud &amp; DevOps Engineer" class="hero-photo" width="400" height="500" fetchpriority="high" decoding="async"/>
         </div>
         <span class="hero-float hero-float--aws"><span class="bf-dot"></span>AWS</span>
         <span class="hero-float hero-float--k8s"><span class="bf-dot"></span>Kubernetes</span>
@@ -1218,10 +1230,12 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
         </div>
       </div>
       <div class="reveal">
-        <div class="form-group"><label for="fname">Your name</label><input type="text" id="fname" name="name" autocomplete="name" placeholder="Jane Smith"/></div>
-        <div class="form-group"><label for="femail">Email address</label><input type="email" id="femail" name="email" autocomplete="email" placeholder="jane@example.com"/></div>
-        <div class="form-group"><label for="fmsg">Message</label><textarea id="fmsg" name="message" placeholder="Tell me about your project..."></textarea></div>
+        <form id="contactForm" onsubmit="return false">
+        <div class="form-group"><label for="fname">Your name</label><input type="text" id="fname" name="name" autocomplete="name" placeholder="Jane Smith" required/></div>
+        <div class="form-group"><label for="femail">Email address</label><input type="email" id="femail" name="email" autocomplete="email" placeholder="jane@example.com" required/></div>
+        <div class="form-group"><label for="fmsg">Message</label><textarea id="fmsg" name="message" placeholder="Tell me about your project..." required></textarea></div>
         <button type="button" class="form-submit" id="formSubmit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>Send message</button>
+        </form>
         <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
       </div>
     </div>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manikandang007.github.io/Portfilo/sitemap.xml
