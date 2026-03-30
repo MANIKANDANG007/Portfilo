@@ -654,16 +654,17 @@ h1 em{font-style:normal;color:var(--accent)}
 }
 
 .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
+.avatar-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;width:100%}
 .avatar{
-  width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--accent-light),color-mix(in srgb,var(--accent-light) 65%,var(--accent) 8%));background-size:200% 200%;border-radius:16px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  position:relative;width:100%;max-width:320px;aspect-ratio:1;border-radius:16px;overflow:hidden;
+  background:linear-gradient(135deg,var(--accent-light),color-mix(in srgb,var(--accent-light) 65%,var(--accent) 8%));
   transition:transform .45s cubic-bezier(.22,.61,.36,1),box-shadow .45s;
+  box-shadow:0 12px 40px color-mix(in srgb,var(--accent) 12%,transparent);
 }
+.avatar-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .avatar:hover{transform:scale(1.02);box-shadow:0 20px 48px color-mix(in srgb,var(--accent) 18%,transparent)}
-#about .about-grid>.reveal:first-child.visible .avatar{animation:shimmer 8s ease infinite}
-.avatar-init{font-size:48px;font-weight:600;color:var(--accent);letter-spacing:-2px;transition:transform .35s ease}
-.avatar:hover .avatar-init{transform:scale(1.04)}
-.avatar-sub{font-size:13px;color:var(--muted)}
+#about .about-grid>.reveal:first-child.visible .avatar{animation:none}
+.avatar-sub{font-size:13px;color:var(--muted);margin:0;text-align:center}
 @keyframes headingSlide{
   from{transform:translateY(16px)}
   to{transform:none}
@@ -859,7 +860,7 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
 @media(max-width:680px){
   section{padding-left:max(6vw, calc(env(safe-area-inset-left, 0px) + 10px));padding-right:max(6vw, calc(env(safe-area-inset-right, 0px) + 10px))}
   .about-grid,.contact-grid{grid-template-columns:1fr}
-  .avatar{display:none}
+  .avatar-wrap{max-width:min(280px,88vw);margin-left:auto;margin-right:auto}
   .hero-stats{gap:24px}
   .nav-toggle{display:flex}
   .nav-menu{
@@ -891,7 +892,7 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
   .tl .tl-dot{transform:scale(1)!important;animation:none!important}
   .avatar{animation:none!important}
   #about .about-grid>.reveal:first-child.visible .avatar{animation:none!important}
-  .avatar,.avatar:hover,.avatar .avatar-init{transform:none!important}
+  .avatar,.avatar:hover{transform:none!important}
   .cert-item,.cert-item:hover{transform:none!important;background:transparent!important}
   .skill:hover,.pill:hover{transform:none!important}
   .skill-card:hover{transform:none!important;box-shadow:none!important;border-color:var(--border)}
@@ -1053,7 +1054,7 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
           <span>MG</span>
           <span>Portrait failed to load — check <strong>hero-photo.jpg</strong>.</span>
         </div>
-        <img src="https://manikandang007.github.io/Portfilo/hero-photo.jpg?v=3" alt="Portrait of Manikandan G — Cloud &amp; DevOps Engineer" class="hero-photo" width="600" height="600" fetchpriority="high" decoding="async"/>
+        <img src="hero-photo.jpg?v=5" alt="Portrait of Manikandan G — Cloud &amp; DevOps Engineer" class="hero-photo" width="600" height="600" fetchpriority="high" decoding="async"/>
         </div>
         <span class="hero-float hero-float--aws"><span class="bf-dot"></span>AWS</span>
         <span class="hero-float hero-float--k8s"><span class="bf-dot"></span>Kubernetes</span>
@@ -1134,9 +1135,11 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
   <div class="max">
     <div class="about-grid">
       <div class="reveal">
+        <div class="avatar-wrap">
         <div class="avatar">
-          <div class="avatar-init">MG</div>
-          <div class="avatar-sub">Bangalore, India</div>
+          <img class="avatar-img" src="hero-photo.jpg?v=5" alt="Portrait of Manikandan G — Cloud &amp; DevOps Engineer" width="600" height="600" loading="lazy" decoding="async"/>
+        </div>
+        <p class="avatar-sub">Bangalore, India</p>
         </div>
         <div class="cert-list" style="margin-top:28px">
           <p class="section-label">Certifications</p>
@@ -1391,9 +1394,14 @@ document.querySelectorAll('#hero .reveal').forEach((el,i)=>{
   if(!fr||!im)return;
   const ok=()=>{fr.classList.add('has-photo');fr.classList.remove('no-photo');};
   const bad=()=>{fr.classList.add('no-photo');fr.classList.remove('has-photo');};
-  im.addEventListener('load',()=>{if(im.naturalWidth>0)ok();else bad();});
-  im.addEventListener('error',bad);
-  if(im.complete){if(im.naturalWidth>0)ok();else bad();}
+  const settle=()=>{if(im.naturalWidth>0)ok();else bad();};
+  im.addEventListener('error',bad,{once:true});
+  if(typeof im.decode==='function'){
+    im.decode().then(settle).catch(bad);
+  }else{
+    im.addEventListener('load',settle,{once:true});
+    if(im.complete)settle();
+  }
 })();
 
 if(!reduceMotion){
