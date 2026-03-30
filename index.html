@@ -1053,7 +1053,7 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
           <span>MG</span>
           <span>Portrait failed to load — check <strong>hero-photo.jpg</strong>.</span>
         </div>
-        <img src="hero-photo.jpg" alt="Portrait of Manikandan G — Cloud &amp; DevOps Engineer" class="hero-photo" width="600" height="600" fetchpriority="high" decoding="async"/>
+        <img src="https://manikandang007.github.io/Portfilo/hero-photo.jpg?v=3" alt="Portrait of Manikandan G — Cloud &amp; DevOps Engineer" class="hero-photo" width="600" height="600" fetchpriority="high" decoding="async"/>
         </div>
         <span class="hero-float hero-float--aws"><span class="bf-dot"></span>AWS</span>
         <span class="hero-float hero-float--k8s"><span class="bf-dot"></span>Kubernetes</span>
@@ -1391,10 +1391,9 @@ document.querySelectorAll('#hero .reveal').forEach((el,i)=>{
   if(!fr||!im)return;
   const ok=()=>{fr.classList.add('has-photo');fr.classList.remove('no-photo');};
   const bad=()=>{fr.classList.add('no-photo');fr.classList.remove('has-photo');};
-  im.addEventListener('load',()=>{if(im.naturalWidth)ok();});
+  im.addEventListener('load',()=>{if(im.naturalWidth>0)ok();else bad();});
   im.addEventListener('error',bad);
-  if(im.complete&&im.naturalWidth>0)ok();
-  else if(im.complete)bad();
+  if(im.complete){if(im.naturalWidth>0)ok();else bad();}
 })();
 
 if(!reduceMotion){
