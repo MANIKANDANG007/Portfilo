@@ -336,8 +336,8 @@ a:focus-visible,button:focus-visible,.color-dot:focus-visible{
 }
 [data-theme="dark"] .nav-logo-mark-inner::after{background:linear-gradient(118deg,transparent 44%,rgba(255,255,255,.12) 50%,transparent 56%)}
 .nav-logo-img{
-  width:100%;height:100%;object-fit:cover;object-position:center 22%;
-  display:block;position:relative;z-index:0;transform:scale(1.02);
+  width:100%;height:100%;object-fit:cover;object-position:center 28%;
+  display:block;position:relative;z-index:0;
 }
 @keyframes navAvatarFramePulse{
   0%,100%{box-shadow:0 3px 14px rgba(0,0,0,.09),0 0 0 1px color-mix(in srgb,var(--accent) 12%,transparent)}
@@ -953,7 +953,6 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
   .tl-tag:hover{transform:none!important;box-shadow:none!important}
   .nav-logo-mark{animation:none!important}
   .nav-logo-mark-inner::after{display:none!important}
-  .nav-logo-img{transform:none!important}
   .nav-logo a:hover .nav-logo-mark,.nav-logo a:focus-visible .nav-logo-mark{transform:none!important;box-shadow:0 4px 12px rgba(0,0,0,.1)}
   #about::after{animation:none!important;transform:none!important;opacity:.45}
   #skills::before{animation:none!important;background-position:0 0,0 0,0 0!important}
@@ -972,7 +971,7 @@ footer>.footer-left,footer>.footer-right{position:relative;z-index:1}
 
 <nav class="site-nav" aria-label="Primary">
   <div class="nav-bar">
-    <div class="nav-logo"><a href="#hero"><span class="nav-logo-mark" aria-hidden="true"><span class="nav-logo-mark-inner"><img class="nav-logo-img" src="avatar-cartoon.png?v=3" alt="" width="400" height="400" decoding="async"/></span></span><span class="nav-logo-text">Manikandan G</span></a></div>
+    <div class="nav-logo"><a href="#hero"><span class="nav-logo-mark" aria-hidden="true"><span class="nav-logo-mark-inner"><img class="nav-logo-img" src="hero-photo.jpg?v=5" alt="" width="600" height="600" decoding="async" fetchpriority="high"/></span></span><span class="nav-logo-text">Manikandan G</span></a></div>
     <div class="nav-right-wrap">
       <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation menu">
         <span class="nav-toggle-ico nav-ico-open"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg></span>
